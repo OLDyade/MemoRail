@@ -10,4 +10,7 @@ Required controls:
 - Sensitive data rules must block secrets, tokens, credentials, and high-risk
   personal data by default.
 - Every write should be auditable.
-
+- Core write, index, and audit failures should be explicit. MemoRail should not
+  silently downgrade to a weaker memory path.
+- HTTP MCP deployments must bind deliberately, require a token, and restrict the
+  configured memory root.

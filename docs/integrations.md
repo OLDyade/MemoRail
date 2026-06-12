@@ -4,10 +4,13 @@ MemoRail targets first-class integrations with:
 
 | Agent | Integration surface |
 | --- | --- |
-| Hermes | Streamable HTTP MCP, REST/OpenAPI |
-| OpenCode | stdio MCP, CLI hooks |
-| OpenClaw | Streamable HTTP MCP, TypeScript SDK |
-| Pi Agent | TypeScript SDK, CLI hooks, prompt protocol |
+| Hermes | MCP plus native memory provider adapter |
+| OpenCode | stdio MCP plus native lifecycle adapter |
+| OpenClaw | MCP plus TypeScript adapter |
+| Pi Agent | TypeScript SDK and prompt lifecycle integration |
 | Claude Code | stdio MCP |
 | Codex | stdio MCP |
 
+MemoRail does not expose REST/OpenAPI as a public integration contract. Native
+adapters should call the TypeScript SDK and map host lifecycle events to
+MemoRail context, write, extract, and doctor operations.

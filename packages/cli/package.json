@@ -6,13 +6,35 @@
   "bin": {
     "memorail": "dist/index.js"
   },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OLDyade/MemoRail.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/OLDyade/MemoRail#readme",
+  "bugs": {
+    "url": "https://github.com/OLDyade/MemoRail/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "node --test",
-    "lint": "tsc -p tsconfig.json --noEmit"
+    "test": "pnpm build && node --test \"dist/**/*.test.js\"",
+    "lint": "pnpm --filter @memorail/core build && tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@memorail/core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.5.0"
   }
 }
-

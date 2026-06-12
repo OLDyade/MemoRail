@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest a focused MemoRail improvement.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - core
+        - cli
+        - mcp-server
+        - adapter
+        - docs
+        - security
+    validations:
+      required: true

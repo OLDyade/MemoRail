@@ -5,11 +5,20 @@
   "description": "File-native memory rails for AI agents.",
   "type": "module",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OLDyade/MemoRail.git"
+  },
+  "homepage": "https://github.com/OLDyade/MemoRail#readme",
+  "bugs": {
+    "url": "https://github.com/OLDyade/MemoRail/issues"
+  },
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "lint": "pnpm -r lint"
+    "lint": "pnpm -r lint",
+    "ci": "pnpm lint && pnpm test && pnpm build"
   },
   "keywords": [
     "agent",
@@ -17,6 +26,8 @@
     "mcp",
     "ai",
     "local-first"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0"
+  }
 }
-
