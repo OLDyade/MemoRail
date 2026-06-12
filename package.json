@@ -1,0 +1,22 @@
+{
+  "name": "memorail",
+  "version": "0.0.0",
+  "private": true,
+  "description": "File-native memory rails for AI agents.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint"
+  },
+  "keywords": [
+    "agent",
+    "memory",
+    "mcp",
+    "ai",
+    "local-first"
+  ]
+}
+
